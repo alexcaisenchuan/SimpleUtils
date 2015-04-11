@@ -9,7 +9,7 @@ import android.widget.Toast;
  * @author caisenchuan
  */
 @SuppressLint("ShowToast")
-public class ToastUtils {
+public class SToastUtils {
     /*--------------------------
      * 自定义类型
      *-------------------------*/

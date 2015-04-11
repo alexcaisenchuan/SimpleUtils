@@ -10,7 +10,7 @@ import android.content.DialogInterface;
  * 一些常用的Dialog显示工具类
  * @author caisenchuan
  */
-public class DialogUtils {
+public class SDialogUtils {
     /*--------------------------
      * 常量
      *-------------------------*/

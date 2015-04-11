@@ -11,7 +11,7 @@ import android.text.TextUtils;
  * 分享工具类
  * @author caisenchuan
  */
-public class ShareUtils {
+public class SShareUtils {
     /*--------------------------
      * 常量
      *-------------------------*/

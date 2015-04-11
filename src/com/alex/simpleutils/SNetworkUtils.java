@@ -8,7 +8,7 @@ import android.net.NetworkInfo;
  * 网络相关工具类
  * @author caisenchuan
  */
-public class NetworkUtils {
+public class SNetworkUtils {
     /*--------------------------
      * 常量
      *-------------------------*/

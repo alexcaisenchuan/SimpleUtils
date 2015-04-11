@@ -7,7 +7,7 @@ import android.text.TextUtils;
  * 设备工具类
  * @author caisenchuan
  */
-public class DeviceUtils {
+public class SDeviceUtils {
     /*--------------------------
      * 常量
      *-------------------------*/

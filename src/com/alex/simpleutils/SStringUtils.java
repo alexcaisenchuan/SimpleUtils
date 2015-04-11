@@ -9,7 +9,7 @@ import android.text.TextUtils;
  * 字符串处理
  * @author caisenchuan
  */
-public class StringUtils {
+public class SStringUtils {
     /*--------------------------
      * 常量
      *-------------------------*/

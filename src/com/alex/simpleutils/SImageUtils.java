@@ -22,7 +22,7 @@ import android.view.View;
  * @author caisenchuan
  *
  */
-public class ImageUtils {
+public class SImageUtils {
     /*--------------------------
      * 自定义类型
      *-------------------------*/
@@ -30,7 +30,7 @@ public class ImageUtils {
     /*--------------------------
      * 常量
      *-------------------------*/
-    private static final String TAG = ImageUtils.class.getSimpleName();
+    private static final String TAG = SImageUtils.class.getSimpleName();
     
     /**图片后缀名*/
     private static final String PIC_FILE_EXT = ".jpeg";
@@ -57,10 +57,10 @@ public class ImageUtils {
         if(activity != null) {
             Intent i = new Intent("android.media.action.IMAGE_CAPTURE");
             
-            filename = FileUtils.getUniqPath(path, PIC_FILE_EXT);
+            filename = SFileUtils.getUniqPath(path, PIC_FILE_EXT);
             File img = new File(filename);
             Uri imgUri = Uri.fromFile(img);
-            KLog.d(TAG, "img uri : " + imgUri);
+            SLog.d(TAG, "img uri : " + imgUri);
             i.putExtra(MediaStore.EXTRA_OUTPUT, imgUri);
             
             activity.startActivityForResult(i, requestCode);
@@ -80,7 +80,7 @@ public class ImageUtils {
             getAlbum.setType("image/*");
             activity.startActivityForResult(getAlbum, requestCode);
         } else {
-            KLog.w(TAG, "activity == null!");
+            SLog.w(TAG, "activity == null!");
         }
     }
 
@@ -94,12 +94,12 @@ public class ImageUtils {
         String filename = null;
 
         // 基本判断
-        if (!FileUtils.isSDMount()) {
+        if (!SFileUtils.isSDMount()) {
             return filename;
         }
 
         // 保存下来
-        filename = FileUtils.getUniqPath(dir, PIC_FILE_EXT);
+        filename = SFileUtils.getUniqPath(dir, PIC_FILE_EXT);
         File mPhoto = new File(filename);
 
         // 保存图片
@@ -197,7 +197,7 @@ public class ImageUtils {
     public static String screenShot(String dir, View v) {
         String ret = "";
         if(v != null) {
-            String fname = FileUtils.getUniqPath(dir, ".png");
+            String fname = SFileUtils.getUniqPath(dir, ".png");
             
             View view = v.getRootView();
             view.setDrawingCacheEnabled(true);
@@ -205,16 +205,16 @@ public class ImageUtils {
             
             Bitmap bitmap = view.getDrawingCache();
             if(bitmap != null) {
-                KLog.d(TAG, "bitmap got!");
+                SLog.d(TAG, "bitmap got!");
                 try {
                     FileOutputStream out = new FileOutputStream(fname);
                     bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
                     ret = fname;
                 } catch(Exception e) {
-                    KLog.e(TAG, "Exception", e);
+                    SLog.e(TAG, "Exception", e);
                 }
             } else {
-                KLog.d(TAG, "bitmap is NULL!");
+                SLog.d(TAG, "bitmap is NULL!");
             }
         }
         return ret;

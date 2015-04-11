@@ -6,7 +6,7 @@ import android.util.Log;
  * 打印调试
  * @author caisenchuan
  */
-public class KLog {
+public class SLog {
     /*--------------------------
      * 自定义类型
      *-------------------------*/

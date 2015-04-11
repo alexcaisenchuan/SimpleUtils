@@ -10,11 +10,11 @@ import android.graphics.BitmapFactory;
  * 一些杂项功能
  * @author caisenchuan
  */
-public class Misc {
+public class SMisc {
     /*--------------------------
      * 常量
      *-------------------------*/
-    private static final String TAG = Misc.class.getSimpleName();
+    private static final String TAG = SMisc.class.getSimpleName();
     
     /**地球半径，米*/
     private static final double EARTH_RADIUS = 6378137;
@@ -65,7 +65,7 @@ public class Misc {
             installed = true;
         } catch(PackageManager.NameNotFoundException e) {
             installed = false;
-            KLog.d(TAG, "Exception", e);
+            SLog.d(TAG, "Exception", e);
         }
         
         return installed;

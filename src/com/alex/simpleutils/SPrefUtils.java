@@ -8,7 +8,7 @@ import android.content.SharedPreferences.Editor;
  * SharedPreferences相关工具类
  * @author caisenchuan
  */
-public class PrefUtils {
+public class SPrefUtils {
     /*--------------------------
      * 常量
      *-------------------------*/

@@ -11,27 +11,16 @@ import android.text.TextUtils;
  * 文件相关工具类
  * @author caisenchuan
  */
-public class FileUtils {
+public class SFileUtils {
 
     /*--------------------------
      * 常量
      *-------------------------*/
-    private static final String TAG = FileUtils.class.getSimpleName();
+    private static final String TAG = SFileUtils.class.getSimpleName();
     
     /*--------------------------
      * 自定义类型
      *-------------------------*/
-    /**
-     * 文件路径类型
-     */
-    public enum PathType {
-        /**photo目录*/
-        PHOTO,
-        /**download目录*/
-        DOWNLOAD,
-        /**分享图片存放目录*/
-        SHARE
-    }
 
     /*--------------------------
      * 成员变量
@@ -63,7 +52,7 @@ public class FileUtils {
                     try {
                         f.delete();
                     } catch (Exception e) {
-                        KLog.e(TAG, "Exception", e);
+                        SLog.e(TAG, "Exception", e);
                     }
                 } else {
                     if (f.exists()) { // 判断是否存在
@@ -71,7 +60,7 @@ public class FileUtils {
                         try {
                             f.delete();
                         } catch (Exception e) {
-                            KLog.e(TAG, "Exception", e);
+                            SLog.e(TAG, "Exception", e);
                         }
                     }
                 }
@@ -127,7 +116,7 @@ public class FileUtils {
             i++;
         }
     
-        KLog.d(TAG, "filename : " + filename);
+        SLog.d(TAG, "filename : " + filename);
     
         return filename;
     }

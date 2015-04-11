@@ -21,7 +21,7 @@ import android.os.Looper;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class BackgroundHandler {
+public class SBackgroundHandler {
 
     static HandlerThread sLooperThread;
     static ExecutorService mThreadPool;
@@ -40,5 +40,5 @@ public class BackgroundHandler {
         return sLooperThread.getLooper();
     }
 
-    private BackgroundHandler() {}
+    private SBackgroundHandler() {}
 }

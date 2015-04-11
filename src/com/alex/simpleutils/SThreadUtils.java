@@ -13,7 +13,7 @@ import java.util.concurrent.FutureTask;
 /**
  * Helper methods to deal with threading related tasks.
  */
-public class ThreadUtils {
+public class SThreadUtils {
     private static final Object sLock = new Object();
     private static boolean sWillOverride = false;
     private static Handler sUiThreadHandler = null;

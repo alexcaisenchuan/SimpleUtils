@@ -3,7 +3,7 @@ package com.alex.simpleutils;
 import java.util.Calendar;
 import java.util.Date;
 
-public class DateTimeUtils {
+public class SDateTimeUtils {
     /*--------------------------
      * 常量
      *-------------------------*/
