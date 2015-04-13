@@ -69,6 +69,13 @@ public class SLog {
         Log.e(tag, str, tr);
     }
     
+    ////////////////看回调栈专用//////////////////
+    public static void showTrace(String tag, String str) {
+        Log.i(tag, str);
+        Throwable th = new Throwable();
+        th.printStackTrace();
+    }
+    
     /*--------------------------
      * protected、packet方法
      *-------------------------*/
