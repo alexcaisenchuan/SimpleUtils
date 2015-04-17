@@ -15,6 +15,7 @@
  */
 package com.alex.simpleutils;
 
+import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 
@@ -25,13 +26,21 @@ public class SBackgroundHandler {
 
     static HandlerThread sLooperThread;
     static ExecutorService mThreadPool;
+    static Handler mHandler;
 
     static {
         sLooperThread = new HandlerThread("BackgroundHandler", HandlerThread.MIN_PRIORITY);
         sLooperThread.start();
+        
         mThreadPool = Executors.newCachedThreadPool();
+        
+        mHandler= new Handler(getLooper());
     }
 
+    public static Handler getHandler() {
+    	return mHandler;
+    }
+    
     public static void execute(Runnable runnable) {
         mThreadPool.execute(runnable);
     }
